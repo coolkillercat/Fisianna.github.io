@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Fisianna&#39;s Cross">
 <meta property="og:description" content="前言： 理论上讲，这不是正经的博文，只能算是半个教案，用来在带学弟的时候提示一下思路。至于为啥要放进博客里……既然开了博客，多少得放点东西呀！ 如果你问我1和2去哪了，我只能回答都在硬盘里，而且大面积抄袭了其他人的文章，懒得传了。 不过实话讲，就这也没多少自己的东西呀……怪丢人的。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-07T18:58:06.616Z">
+<meta property="og:updated_time" content="2018-04-07T19:16:46.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="带学弟的教案-3-hexo">
 <meta name="twitter:description" content="前言： 理论上讲，这不是正经的博文，只能算是半个教案，用来在带学弟的时候提示一下思路。至于为啥要放进博客里……既然开了博客，多少得放点东西呀！ 如果你问我1和2去哪了，我只能回答都在硬盘里，而且大面积抄袭了其他人的文章，懒得传了。 不过实话讲，就这也没多少自己的东西呀……怪丢人的。">
@@ -235,20 +235,18 @@
 <li>当然，你可以放到自己的云服务器，不过这儿有一个免费而且优秀的解决方案，github page。</li>
 <li>所以，根据<a href="https://pages.github.com/" target="_blank" rel="noopener">https://pages.github.com/</a> ，整一个自己的github page先。</li>
 <li>然后参照hexo文档-部署（Deployment），配置自己的hexo，其实要改的只有deploy一项。</li>
-<li><p>我比较懒，所以配置的非常简略：</p>
-<pre><code>deploy: 
+<li>我比较懒，所以配置的非常简略：<pre><code>deploy: 
   type: git
   repo: https://github.com/Fisianna/Fisianna.github.io
 </code></pre></li>
-<li><p>repo一定注意别写错，另外如果不想用https，用ssh也可以。github有两种认证方式，一种是https，一种通过ssh。ssh就写成类似于<br>  <a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:Fisianna/Fisianna.github.io.git`这样的形式</p>
-</li>
-<li><p>然后，在正式部署之前，还要装一个小工具hexo-deployer-git</p>
-</li>
+<li>repo一定注意别写错，另外如果不想用https，用ssh也可以。github有两种认证方式，一种是https，一种通过ssh。ssh就把repo写成类似于<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:Fisianna/Fisianna.github.io.git这样的形式。</li>
+<li>然后，在正式部署之前，还要装一个小工具hexo-deployer-git</li>
 <li>用npm来装这个东西，装的时候记得加上–save参数。</li>
 <li>然后就可以hexo g，hexo d啦。</li>
 <li>如果没什么意外，那么访问username.github.io就能看见你的博客。</li>
 </ul>
-<p>如果有什么意外……就出了意外再说吧！反正总得习惯面向Google和Stack Overflow玩耍的。</p>
+<p><em>如果有什么意外……就出了意外再说吧！反正总得习惯面向Google和Stack Overflow玩耍的。
+</em></p>
 
       
 
