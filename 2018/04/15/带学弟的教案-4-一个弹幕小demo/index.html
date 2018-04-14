@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Fisianna.github.io">
-  <title>从今天起开始做魔王 | Fisianna&#39;s Cross</title>
+  <title>带学弟的教案-4-一个弹幕小demo | Fisianna&#39;s Cross</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="之前的事情也不多提，在网络上，换个新名字新avatar，也就相当于投胎转世。 开博客的直接原因，就是要教俱乐部的学弟们也写博客。说来惭愧，明明自己也没多强，却也硬着头皮带起了几个学弟，前两节课都教的是一些概念，多少让人觉得没意思，这回让他们自己搭hexo + github pages，总归新奇一点。 实话讲，今年的学弟着实厉害，比我当年强上不少，身为学长是倍感压力，生怕一觉醒来，就发现肚子里没货了">
-<meta name="keywords" content="随笔,开博词">
+  <meta name="description" content="前言这是第四课，在之前的几课中，我们教了web最基本的概念，简单说了说web技术的历史，简单画了个技能树，简单聊了聊http协议，用hexo+github pages搭建了自己的博客，并要求自学了基本的web开发工具。 也就是说，基础概念有了，记录学习的工具也有了，开发工具也有了。那接下来呢，就应该做一点实际的开发试试手。如果你之前自学的不错，那这个小项目没多少难度，最多需要你稍微翻翻文档。如果之">
+<meta name="keywords" content="教案,web开发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从今天起开始做魔王">
-<meta property="og:url" content="https://Fisianna.github.io/2018/04/03/从今天起开始做魔王/index.html">
+<meta property="og:title" content="带学弟的教案-4-一个弹幕小demo">
+<meta property="og:url" content="https://Fisianna.github.io/2018/04/15/带学弟的教案-4-一个弹幕小demo/index.html">
 <meta property="og:site_name" content="Fisianna&#39;s Cross">
-<meta property="og:description" content="之前的事情也不多提，在网络上，换个新名字新avatar，也就相当于投胎转世。 开博客的直接原因，就是要教俱乐部的学弟们也写博客。说来惭愧，明明自己也没多强，却也硬着头皮带起了几个学弟，前两节课都教的是一些概念，多少让人觉得没意思，这回让他们自己搭hexo + github pages，总归新奇一点。 实话讲，今年的学弟着实厉害，比我当年强上不少，身为学长是倍感压力，生怕一觉醒来，就发现肚子里没货了">
+<meta property="og:description" content="前言这是第四课，在之前的几课中，我们教了web最基本的概念，简单说了说web技术的历史，简单画了个技能树，简单聊了聊http协议，用hexo+github pages搭建了自己的博客，并要求自学了基本的web开发工具。 也就是说，基础概念有了，记录学习的工具也有了，开发工具也有了。那接下来呢，就应该做一点实际的开发试试手。如果你之前自学的不错，那这个小项目没多少难度，最多需要你稍微翻翻文档。如果之">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-07T18:58:26.363Z">
+<meta property="og:image" content="https://s1.ax1x.com/2018/04/15/CZNakR.md.png">
+<meta property="og:updated_time" content="2018-04-14T19:25:17.201Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从今天起开始做魔王">
-<meta name="twitter:description" content="之前的事情也不多提，在网络上，换个新名字新avatar，也就相当于投胎转世。 开博客的直接原因，就是要教俱乐部的学弟们也写博客。说来惭愧，明明自己也没多强，却也硬着头皮带起了几个学弟，前两节课都教的是一些概念，多少让人觉得没意思，这回让他们自己搭hexo + github pages，总归新奇一点。 实话讲，今年的学弟着实厉害，比我当年强上不少，身为学长是倍感压力，生怕一觉醒来，就发现肚子里没货了">
+<meta name="twitter:title" content="带学弟的教案-4-一个弹幕小demo">
+<meta name="twitter:description" content="前言这是第四课，在之前的几课中，我们教了web最基本的概念，简单说了说web技术的历史，简单画了个技能树，简单聊了聊http协议，用hexo+github pages搭建了自己的博客，并要求自学了基本的web开发工具。 也就是说，基础概念有了，记录学习的工具也有了，开发工具也有了。那接下来呢，就应该做一点实际的开发试试手。如果你之前自学的不错，那这个小项目没多少难度，最多需要你稍微翻翻文档。如果之">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/04/15/CZNakR.md.png">
   
     <link rel="alternative" href="/atom.xml" title="Fisianna&#39;s Cross" type="application/atom+xml">
   
@@ -145,38 +147,108 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-从今天起开始做魔王" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-带学弟的教案-4-一个弹幕小demo" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      从今天起开始做魔王
+      带学弟的教案-4-一个弹幕小demo
     </h1>
   
 
         
-        <a href="/2018/04/03/从今天起开始做魔王/" class="archive-article-date">
-  	<time datetime="2018-04-02T17:13:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-03</time>
+        <a href="/2018/04/15/带学弟的教案-4-一个弹幕小demo/" class="archive-article-date">
+  	<time datetime="2018-04-14T19:21:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前的事情也不多提，在网络上，换个新名字新avatar，也就相当于投胎转世。</p>
-<p>开博客的直接原因，就是要教俱乐部的学弟们也写博客。说来惭愧，明明自己也没多强，却也硬着头皮带起了几个学弟，前两节课都教的是一些概念，多少让人觉得没意思，这回让他们自己搭hexo + github pages，总归新奇一点。</p>
-<p>实话讲，今年的学弟着实厉害，比我当年强上不少，身为学长是倍感压力，生怕一觉醒来，就发现肚子里没货了。</p>
-<a id="more"></a>
-<hr>
-<p>而归到根本原因，新开个博客，一是多少督促自己学点技术。不知是谁说过，博客相当于程序员的笔记，我觉得很有道理。即便我还算不上个程序员，但写一写总归是好的。若是坚持下去了，将来找老板的时候，直接一个博客地址甩过去，多酷呀。而另一个目的，还是为了多少写点东西，免得整天看片打游戏偶尔撸撸代码，弄得写一两篇八百字作文的能力都没有，岂不哀哉！</p>
-<hr>
-<p>所以，这博客主要也就两个内容。</p>
-<p>最主要的，自然是记录一下学了点什么东西，算是学习笔记。自中学以来，我就有上课不记笔记的习惯，主要是字丑，记下去难看，反而影响了学习的性质；但博客就不一样，博客总不会比宋体字还难看吧？我不是特别爱学习的人，不过最近越来越有紧迫感，希望这紧迫感能压得我坚持下去，不求成就一方大佬，成个敢对外自称程序员的小伙子就行。</p>
-<p>而另一个，则是放点文章。说是文章，也不完全，大多数时候估计只有些不成章的段子，也许有趣，也许没劲，这个实在是说不好；不过有一点，我写东西，尽量会避免无病呻吟，毕竟强说愁不如不说，而且我谈政治，也不喜欢对什么事情做评判，这样一来，雷应该会少一些。而段子以外，要是有了兴致，说不定也可能放点自娱自乐的小说——这也不值得期望，我不是会写小说的人，说情节安排，说人物塑造，都是一窍不通，也没什么文字功底，词穷，做不出好的描写；就算乍一看还有点意思，那也往往是虎头蛇尾，不堪卒读；而且，我写文随缘，要把一篇小说写完，那几乎是不可能之事。</p>
-<p>除此以外，我一下子也想不出还能有什么东西了。若是有熟人见到了这个博客，希望能多多督促我，别最后把博客整成了胡适日记；若是陌生的游客，也望不吝赐教，我不怕怼，我很吃怼。</p>
-<p>虽说，我估摸着也没几个人会摸到这儿来……</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是第四课，在之前的几课中，我们教了web最基本的概念，简单说了说web技术的历史，简单画了个技能树，简单聊了聊http协议，用hexo+github pages搭建了自己的博客，并要求自学了基本的web开发工具。</p>
+<p>也就是说，基础概念有了，记录学习的工具也有了，开发工具也有了。<br>那接下来呢，就应该做一点实际的开发试试手。如果你之前自学的不错，那这个小项目没多少难度，最多需要你稍微翻翻文档。如果之前自学的不怎样，不要紧，看着给出的思路，应该也能做出来。</p>
+<p>我不会在这里给出具体代码，根据我的经验，复制粘贴的诱惑是非常难以抵挡的。当然，如果有心，想在网上找到一个实现代码非常容易。</p>
+<p>看别人的代码并不要紧，在写自己的东西前都是要看无数别人的代码的，但是，仅限参考。<br><a id="more"></a></p>
+<h2 id="一个不完整的弹幕小应用"><a href="#一个不完整的弹幕小应用" class="headerlink" title="一个不完整的弹幕小应用"></a>一个不完整的弹幕小应用</h2><h3 id="项目来源："><a href="#项目来源：" class="headerlink" title="项目来源："></a>项目来源：</h3><p>这是来自freecodecamp上的小项目，如果有刷freecodecamp，应该就见过他。项目难度很低，又比较实用，可能还比较新潮（这我说不准，我是个老古董），但总之，很适合练手。</p>
+<h3 id="项目目标"><a href="#项目目标" class="headerlink" title="项目目标"></a>项目目标</h3><p><a href="https://imgchr.com/i/CZNakR" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/04/15/CZNakR.md.png" alt="CZNakR.md.png"></a></p>
+<p>（如果你看的是pdf，那么是没有图的。你可以查看同文件夹里的image.png，或者登陆freecodecamp，看它的示例。）<br>实现类似图中的弹幕发射器：</p>
+<ul>
+<li>每隔一小段时间，上面的面板中会随机从弹幕池里发射一条弹幕。</li>
+<li>点击发射按钮，会往弹幕池中添加一条弹幕，并立即发射它。</li>
+<li>点击清屏，面板上的所有弹幕消失，并且弹幕池被清空。</li>
+</ul>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>这确实是个简单的项目。对于新手来说，如果不知道怎么做，不如先从最简单直观的地方做起——画界面。</p>
+<p>你可以很容易地用html+css画出类似图上的界面。毕竟这看上去非常简单：一个显示框，一个输入框，俩按钮。</p>
+<p>不过，在这个过程里，你也许也得考虑一些问题：</p>
+<ul>
+<li>我这个显示面板应该怎么设计？<ul>
+<li>显然，如果只是完成上面的这些简单功能，一个div也许也足够了。</li>
+<li>但我以后会不会需要其他功能？例如一个遮罩层？又或者边框有什么可爱的小挂件？</li>
+</ul>
+</li>
+<li>发射和清除这两个按钮又怎么设计？<ul>
+<li>我当然可以让他们用同一个class，只要id不同就可以了。</li>
+<li>但是，如果我这是一个比较大的应用，需要复用很多个类似的按钮，是不是应该把这两种不同风格的按钮各作一个类？</li>
+</ul>
+</li>
+<li>当然也许还有其他问题，任何一个预先想到的问题都是有价值的。</li>
+</ul>
+<p>再然后，你得开始用js写逻辑了。当然，实际上我更建议（或者说强烈建议）你用jquery来写，jquery可以简化很多事情。当然，纯原生js也可以，只不过可能麻烦点儿。<br>这里你可以有很多种思想，例如说：</p>
+<ul>
+<li>一切都是对象！</li>
+<li>一切都是过程！</li>
+<li>………………</li>
+</ul>
+<p>当然，无论遵循什么样的思想，你都可以实现他，你若问我哪个好，我不敢说。不过在这儿，我相信各位并不熟悉面向对象，而我的篇幅也算有限（主要是懒），所以就只按着面向过程的思路来了。</p>
+<p>我们从简单开始，在剩下的部分里，看上去最简单的地方应该就是数据了！</p>
+<p>首先想想，你有哪些数据？他们又该存在哪里？</p>
+<ul>
+<li>弹幕文字！这当然是重中之重<ul>
+<li>在一个正经的弹幕应用里，他应该存在服务器中。不过我们可能没有一个服务器，而这也只是个demo，那么不妨就存在内存里。用一个js数组来存它吧！这个js数组，就是弹幕池。</li>
+</ul>
+</li>
+<li>弹幕的速度、颜色、字体大小、出现位置……<ul>
+<li>他们当然可以和弹幕文字存在一起，那样的话只需要把它们共同放进一个“弹幕对象”里就行了。</li>
+<li>不过，看上去我们这个demo暂时没有提供调整这些数据的用户交互，那么，也许这些都可以先随机生成。</li>
+<li>如果是随机生成，那我可以不专门去保存，而是在每次发射弹幕的时候给它填上去，等弹幕走到底了，我就给他们一起删掉。<br>这样想，似乎只需要给弹幕文字本身开一个数组就可以了？当然，你可以有别的想法。无所谓，只要能实现，就是好代码。</li>
+</ul>
+</li>
+</ul>
+<p>那么，数据搞定了。还有些什么过程要写呢：</p>
+<ul>
+<li>往弹幕池里添加一条新弹幕</li>
+<li>弹射弹幕</li>
+<li>清除弹幕</li>
+</ul>
+<h4 id="往弹幕池里添加一条新弹幕"><a href="#往弹幕池里添加一条新弹幕" class="headerlink" title="往弹幕池里添加一条新弹幕"></a>往弹幕池里添加一条新弹幕</h4><p>这真的很容易。你只要监听点击事件，有人点了“发射”，你就把输入框中的文字push到弹幕池里，然后指定这个弹幕调用一下下面的弹射弹幕函数，再然后把输入框清空。实话讲，这没什么好说的。</p>
+<h4 id="清除弹幕"><a href="#清除弹幕" class="headerlink" title="清除弹幕"></a>清除弹幕</h4><p>这更容易了，只要监听到有人点了“清除”，你就把弹幕池给清空。破坏总是比建造容易，删除也总比添加容易。</p>
+<h4 id="弹射弹幕"><a href="#弹射弹幕" class="headerlink" title="弹射弹幕"></a>弹射弹幕</h4><p>这就麻烦点了。我似乎要做很多事，例如往弹幕面板里添加和删除dom对象，例如实现弹幕从右飞到左的动画效果，例如生成随机的颜色和弹幕弹出位置……</p>
+<p>这不对！程序应该是简单的东西，而不是罗里吧嗦一大坨，死文青才喜欢罗里吧嗦一大坨的让人半懂不懂的东西。</p>
+<p>所以，弹射弹幕这个过程应该再细化：</p>
+<ul>
+<li>从弹幕池中随机选取一条弹幕</li>
+<li>将这条弹幕转化为HTML对象</li>
+<li>给这个HTML对象随机一些新的属性<ul>
+<li>颜色</li>
+<li>字体大小</li>
+<li>出现的位置 </li>
+<li>………………</li>
+</ul>
+</li>
+<li>将这个对象塞入你在html里写好的面板div中</li>
+<li>开始一个从右到左的移动动画（建议用jquery，它有封装好的animate方法）<ul>
+<li>获取面板宽度，这就是你的移动长度</li>
+<li>只要没到达目标位置，就不断改变弹幕的位置。记得设置合适的间隔——当然，如果你用jquery，就没这么麻烦。</li>
+<li>然后记得删除这个对象！</li>
+</ul>
+</li>
+</ul>
+<p>最后，记得每隔一小段时间，重复来一次这整个过程。</p>
+<h3 id="然后呢？"><a href="#然后呢？" class="headerlink" title="然后呢？"></a>然后呢？</h3><p>然后？没有然后了，你已经基本实现了这个项目，如果顺利，你已经让他跑了起来。如果不顺利……那就再多努努力。</p>
+<p>如果你想继续下去，那么还可以继续做开发，添加许多新特性。例如说，你可以把弹幕池存到云服务器，这样你就可以让所有人都给你发弹幕，也让所有人都看见别人的弹幕。这很有用，在一些活动的现场经常有类似的东西，大家会给大屏幕发一些奇奇怪怪的话语，气氛一下就活跃起来了。</p>
+<p>当然，你还有其他特性可以添加。例如字幕可能不只是从右至左的，例如字幕的颜色、字体、大小、速度都可以由用户来选择，例如你可以有个暂停播放功能……总之，新特性无穷无尽，如果你觉得有趣，就可以去实现。</p>
 
       
 
@@ -211,11 +283,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教案</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">开博词</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web开发</a>
         		</li>
       		
 		</ul>
@@ -271,7 +343,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://Fisianna.github.io/2018/04/03/从今天起开始做魔王/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://Fisianna.github.io/2018/04/15/带学弟的教案-4-一个弹幕小demo/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,15 +357,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/08/带学弟的教案-3-hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/15/周记（1）/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          带学弟的教案-3-hexo
+          周记（1）
         
       </div>
     </a>
   
+  
+    <a href="/2018/04/08/带学弟的教案-3-hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">带学弟的教案-3-hexo</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -322,8 +399,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "https://Fisianna.github.io/2018/04/03/从今天起开始做魔王/", 
-    sourceId: "从今天起开始做魔王",
+    url: "https://Fisianna.github.io/2018/04/15/带学弟的教案-4-一个弹幕小demo/", 
+    sourceId: "带学弟的教案-4-一个弹幕小demo",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
