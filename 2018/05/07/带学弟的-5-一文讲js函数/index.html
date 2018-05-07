@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2018/05/07/CaBBMd.png">
 <meta property="og:image" content="https://s1.ax1x.com/2018/05/07/CaB2i8.png">
 <meta property="og:image" content="https://s1.ax1x.com/2018/05/07/CaBWRg.png">
-<meta property="og:updated_time" content="2018-05-07T13:06:30.654Z">
+<meta property="og:updated_time" content="2018-05-07T13:07:39.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="带学弟的教案-5-一文讲js函数">
 <meta name="twitter:description" content="前言前两天一个不知道啥时候订阅的网站给我发了一篇邮件，大意就是它有了新文章了你快来看啊。随手瞄了眼发现内容正好可以拿来做教案，难度也适合，所以就翻译了一下。 大概包括剩余参数，箭头函数，回调函数。都是浅尝辄止的难度。 没有得到任何授权或许可，不过管它呢……我甚至也不能确定我的原文地址是不是真的原文地址。 原文地址： http://www.js-craft.io/blog/18-04-29-All-">
@@ -219,7 +219,9 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> square = <span class="function">(<span class="params">number</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> number * number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(square(<span class="number">2</span>));</span><br></pre></td></tr></table></figure>
 <h2 id="接受超过一个参数的函数（事实上，可以接受“n”个参数）"><a href="#接受超过一个参数的函数（事实上，可以接受“n”个参数）" class="headerlink" title="接受超过一个参数的函数（事实上，可以接受“n”个参数）"></a>接受超过一个参数的函数（事实上，可以接受“n”个参数）</h2><p>接受参数的数量在规则上没有理论的最大值，不过在现实里却有点限制。</p>
 <h3 id="怎样写一个接受“n个参数”的函数？"><a href="#怎样写一个接受“n个参数”的函数？" class="headerlink" title="怎样写一个接受“n个参数”的函数？"></a>怎样写一个接受“n个参数”的函数？</h3><p>让我们写一个可以接受“n个参数”的sum()函数，返回所有参数的总和。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//一个旧方法</span></span><br><span class="line"><span class="keyword">const</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;  i &lt; <span class="built_in">arguments</span>.length; i++)&#123;</span><br><span class="line">        result += <span class="built_in">arguments</span>[i];    </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">我们可以像这样调用上面的函数</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>,<span class="number">2</span>));</span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>));</span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>));</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//一个旧方法</span></span><br><span class="line"><span class="keyword">const</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;  i &lt; <span class="built_in">arguments</span>.length; i++)&#123;</span><br><span class="line">        result += <span class="built_in">arguments</span>[i];    </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们可以像这样调用上面的函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>,<span class="number">2</span>));</span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>));</span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>));</span><br></pre></td></tr></table></figure>
 <h3 id="它怎么运作的？"><a href="#它怎么运作的？" class="headerlink" title="它怎么运作的？"></a>它怎么运作的？</h3><p>如你所见，这个sum函数没有显式地接受任何参数。 现在想象一下你要用显式的参数来实现这个求和函数，预先定义所有参数要花多大功夫？你不知道这个求和函数被运行的时候带着多少个参数。</p>
 <p>例如sum(1)，只带一个参数，返回1。也可以带两个参数，sum(1,2),返回3。它还可以带着一百个参数运行，就像sum(1,2,3,4,5,6,7……….,100)然后返回5050。</p>
 <p>所以，JavaScript给我们提供了这个秘密的“arguments”对象，这个对象能容纳所有的参数并且可以在任何函数里使用。</p>
@@ -520,6 +522,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">周记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">教案</a>
               </li>
              
@@ -529,10 +535,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">翻译</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">周记</a>
               </li>
              
               <li class="article-tag-list-item">
