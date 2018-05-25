@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Fisianna.github.io">
-  <title>带学弟的教案-3-hexo | Fisianna&#39;s Cross</title>
+  <title>Electron学习笔记（1） | Fisianna&#39;s Cross</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言： 理论上讲，这不是正经的博文，只能算是半个教案，用来在带学弟的时候提示一下思路。至于为啥要放进博客里……既然开了博客，多少得放点东西呀！ 如果你问我1和2去哪了，我只能回答都在硬盘里，而且大面积抄袭了其他人的文章，懒得传了。 不过实话讲，就这也没多少自己的东西呀……怪丢人的。">
-<meta name="keywords" content="教案,hexo">
+  <meta name="description" content="为什么突然学Electron了？ 学习不需要理由 我并没有一个确切的项目需求，只是突然想写写桌面端应用 缘，妙不可言">
+<meta name="keywords" content="Node,Electron,Desktop开发,笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="带学弟的教案-3-hexo">
-<meta property="og:url" content="https://Fisianna.github.io/2018/04/08/带学弟的教案-3-hexo/index.html">
+<meta property="og:title" content="Electron学习笔记（1）">
+<meta property="og:url" content="https://Fisianna.github.io/2018/05/24/Electron学习笔记（1）/index.html">
 <meta property="og:site_name" content="Fisianna&#39;s Cross">
-<meta property="og:description" content="前言： 理论上讲，这不是正经的博文，只能算是半个教案，用来在带学弟的时候提示一下思路。至于为啥要放进博客里……既然开了博客，多少得放点东西呀！ 如果你问我1和2去哪了，我只能回答都在硬盘里，而且大面积抄袭了其他人的文章，懒得传了。 不过实话讲，就这也没多少自己的东西呀……怪丢人的。">
+<meta property="og:description" content="为什么突然学Electron了？ 学习不需要理由 我并没有一个确切的项目需求，只是突然想写写桌面端应用 缘，妙不可言">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-07T19:16:46.424Z">
+<meta property="og:image" content="https://s1.ax1x.com/2018/05/24/CW0gzQ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/05/24/CWDfU0.jpg">
+<meta property="og:updated_time" content="2018-05-25T09:50:01.696Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="带学弟的教案-3-hexo">
-<meta name="twitter:description" content="前言： 理论上讲，这不是正经的博文，只能算是半个教案，用来在带学弟的时候提示一下思路。至于为啥要放进博客里……既然开了博客，多少得放点东西呀！ 如果你问我1和2去哪了，我只能回答都在硬盘里，而且大面积抄袭了其他人的文章，懒得传了。 不过实话讲，就这也没多少自己的东西呀……怪丢人的。">
+<meta name="twitter:title" content="Electron学习笔记（1）">
+<meta name="twitter:description" content="为什么突然学Electron了？ 学习不需要理由 我并没有一个确切的项目需求，只是突然想写写桌面端应用 缘，妙不可言">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/05/24/CW0gzQ.png">
   
     <link rel="alternative" href="/atom.xml" title="Fisianna&#39;s Cross" type="application/atom+xml">
   
@@ -145,108 +148,74 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-带学弟的教案-3-hexo" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Electron学习笔记（1）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      带学弟的教案-3-hexo
+      Electron学习笔记（1）
     </h1>
   
 
         
-        <a href="/2018/04/08/带学弟的教案-3-hexo/" class="archive-article-date">
-  	<time datetime="2018-04-07T18:39:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-08</time>
+        <a href="/2018/05/24/Electron学习笔记（1）/" class="archive-article-date">
+  	<time datetime="2018-05-24T09:30:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h1><ol>
-<li>理论上讲，这不是正经的博文，只能算是半个教案，用来在带学弟的时候提示一下思路。至于为啥要放进博客里……既然开了博客，多少得放点东西呀！</li>
-<li>如果你问我1和2去哪了，我只能回答都在硬盘里，而且大面积抄袭了其他人的文章，懒得传了。</li>
-<li>不过实话讲，就这也没多少自己的东西呀……怪丢人的。<a id="more"></a>
-</li>
-</ol>
-<hr>
-<h1 id="什么是hexo？"><a href="#什么是hexo？" class="headerlink" title="什么是hexo？"></a>什么是hexo？</h1><ul>
-<li>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。（摘自官网）</li>
+        <h2 id="为什么突然学Electron了？"><a href="#为什么突然学Electron了？" class="headerlink" title="为什么突然学Electron了？"></a>为什么突然学Electron了？</h2><ul>
+<li>学习不需要理由</li>
+<li>我并没有一个确切的项目需求，只是突然想写写桌面端应用</li>
+<li>缘，妙不可言</li>
 </ul>
-<h1 id="为什么要用hexo？"><a href="#为什么要用hexo？" class="headerlink" title="为什么要用hexo？"></a>为什么要用hexo？</h1><ul>
-<li>写博客是个好习惯，而作为一个博客框架，hexo很方便。</li>
-<li>hexo的逼格，比博客园之类的网站或者WordPress自建的博客都要高一点。</li>
-<li>出于教学目的，我觉着能从hexo带出markdown，带出git，带出node.js，可以说是非常棒了。</li>
-</ul>
-<h1 id="hexo要学到什么程度？"><a href="#hexo要学到什么程度？" class="headerlink" title="hexo要学到什么程度？"></a>hexo要学到什么程度？</h1><ul>
-<li>没什么程度，能用就行了。</li>
-<li>如果用起来不爽，那么自己翻文档魔改。</li>
-<li>在这里的目标，就是用hexo+github_page建一个自己的博客。</li>
-</ul>
-<h1 id="在使用hexo之前"><a href="#在使用hexo之前" class="headerlink" title="在使用hexo之前"></a>在使用hexo之前</h1><ol>
-<li>你得安装git</li>
-<li>你得安装node.js</li>
-</ol>
-<h2 id="这里介绍一下git"><a href="#这里介绍一下git" class="headerlink" title="这里介绍一下git"></a>这里介绍一下git</h2><ul>
-<li>git是一个开源的分布式代码版本控制系统。</li>
-<li><a href="https://git-scm.com/docs" target="_blank" rel="noopener">https://git-scm.com/docs</a></li>
-<li>↑官方文档请自行翻阅</li>
-<li>所以现在去官网装一个git，请。</li>
-</ul>
-<h2 id="这里介绍一下node-js"><a href="#这里介绍一下node-js" class="headerlink" title="这里介绍一下node.js"></a>这里介绍一下node.js</h2><ul>
-<li>node.js是一个基于v8引擎的js runtime。这个用来写服务器，用来写工具，写框架，都非常牛逼。</li>
-<li>无数人用node.js做了无数事，以后你们会经常碰见，所以提前了解一下没有坏处。</li>
-<li>不过反正以后会教，所以这里不提前赘述了。</li>
-<li>所以现在去官网装一个node.js，Long Term Support就好，我们没那么激进。</li>
-<li>然后再装个npm吧，npm是node.js的一个包管理工具，虽然这玩意儿非常牛逼不过如果现在跟你们吹你们也没啥感受，那就先用上再说，以后总有一天会知道这东西哪里牛逼的。</li>
-</ul>
-<h1 id="然后呢？"><a href="#然后呢？" class="headerlink" title="然后呢？"></a>然后呢？</h1><ul>
-<li>然后当然是去装一个hexo！</li>
-<li>实话说，我刚刚才发现hexo的官网居然有简体中文版……顿时感觉逼格低了不少</li>
-<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a></li>
-<li>有任何问题看一眼文档，这文档很详细了！</li>
-</ul>
-<h1 id="我装好hexo了！"><a href="#我装好hexo了！" class="headerlink" title="我装好hexo了！"></a>我装好hexo了！</h1><ul>
-<li>事实上，我觉着有了官方文档，这部分内容压根不用写。但多少还是写一下吧，不然这小短文还有那么哪怕半点意义吗？</li>
-<li>首先用hexo init命令建一个站</li>
-<li>然后啥也别管，hexo g一下</li>
-<li>然后hexo server一下，它会提醒你已经开了个服务器监听某个端口。</li>
-<li>默认情况下，访问<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></li>
-<li>如果没有问题，那你就看见hello-world界面了！</li>
-</ul>
-<h1 id="这个过程都发生了什么？"><a href="#这个过程都发生了什么？" class="headerlink" title="这个过程都发生了什么？"></a>这个过程都发生了什么？</h1><ul>
-<li>首先，hexo init帮你初始化了一个新的hexo项目。详细请参考hexo官网文档-开始使用-建站。自从发现官网有中文之后我就已经没多少解说动力了……</li>
-<li>然后，hexo g是hexo generate命令的缩写，它会读取你的配置文件，再读取scaffolds文件夹中的一些模板，读取themes里的主题，读取source/_post里的md文件，然后生成静态页面，全部放进public这个文件夹里。</li>
-<li>虽然你什么博文都没写，不过source/_post一开始就有个hello-world.md文件</li>
-<li>hexo server则启动了一个测试用的服务器，把刚刚生成的，public文件夹中的所有玩意儿发送给访问服务器的客户端。</li>
-<li>最后你看见了helloworld页面！</li>
-</ul>
-<h1 id="那我怎么写我的第一篇博文？"><a href="#那我怎么写我的第一篇博文？" class="headerlink" title="那我怎么写我的第一篇博文？"></a>那我怎么写我的第一篇博文？</h1><ul>
-<li>首先用hexo new来在source/_post里新建一个md文件，hexo new这个命令详细参考官方文档-基本操作-写作。</li>
-<li>然后你得学一学md语法，别担心，这玩意儿十分钟就能学会，用md写下自己的第一篇博客。</li>
-<li>然后用hexo g生成，hexo server测试。</li>
-<li>大功告成！</li>
-<li>哦对了，如果你不希望再看见hello world那篇博客，记得在hexo g 之前把source/_post中的那个hello-world.md删掉</li>
-</ul>
-<h1 id="那怎么把我的博客部署到服务器？"><a href="#那怎么把我的博客部署到服务器？" class="headerlink" title="那怎么把我的博客部署到服务器？"></a>那怎么把我的博客部署到服务器？</h1><ul>
-<li>是的，想让别人看见你的博客，你必须得把它部署到一个服务器上。</li>
-<li>当然，你可以放到自己的云服务器，不过这儿有一个免费而且优秀的解决方案，github page。</li>
-<li>所以，根据<a href="https://pages.github.com/" target="_blank" rel="noopener">https://pages.github.com/</a> ，整一个自己的github page先。</li>
-<li>然后参照hexo文档-部署（Deployment），配置自己的hexo，其实要改的只有deploy一项。</li>
-<li>我比较懒，所以配置的非常简略：<pre><code>deploy: 
-  type: git
-  repo: https://github.com/Fisianna/Fisianna.github.io
-</code></pre></li>
-<li>repo一定注意别写错，另外如果不想用https，用ssh也可以。github有两种认证方式，一种是https，一种通过ssh。ssh就把repo写成类似于<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:Fisianna/Fisianna.github.io.git这样的形式。</li>
-<li>然后，在正式部署之前，还要装一个小工具hexo-deployer-git</li>
-<li>用npm来装这个东西，装的时候记得加上–save参数。</li>
-<li>然后就可以hexo g，hexo d啦。</li>
-<li>如果没什么意外，那么访问username.github.io就能看见你的博客。</li>
-</ul>
-<p><em>如果有什么意外……就出了意外再说吧！反正总得习惯面向Google和Stack Overflow玩耍的。
-</em></p>
+<a id="more"></a>
+<h2 id="Electron的来路"><a href="#Electron的来路" class="headerlink" title="Electron的来路"></a>Electron的来路</h2><h3 id="zcbenz"><a href="#zcbenz" class="headerlink" title="zcbenz"></a>zcbenz</h3><p>如果要说Electron，那就不得不先说说zcbenz这号大神。</p>
+<p>2012年，zcbenz注意到了一则Intel的实习信息，那上面表示需要一名熟悉Node.js的大学生进行node-webkit的开发。zcbenz投了简历，过了。</p>
+<p>node-webkit是个什么玩意儿呢，这是一个可以创建webkit窗口的Node.js模块，而关键的地方在于，你可以在这个窗口页面里调用Node.js的模块。</p>
+<p>这个跟electron有什么关系？别急，还有点波折。</p>
+<p>最开始zcbenz的工作是对node-webkit的一个分支进行改进，但是很快发觉开发难以继续，所以干脆直接将整个node-webkit推倒重写了。可能这就是大神吧。</p>
+<p>再后来，随着开发继续，node-webkit逐渐变成了一个独立的浏览器，再变成了一个桌面应用开发工具。</p>
+<p>与此同时，node-webkit越来越火，Intel注意到了自己还有一个这么牛逼的项目。上面的关注多了以后，管的也就多了，于是zcbenz逐渐失去了node-webkit的自治权。</p>
+<p>所以，zcbenz结束了在Intel的实习后，去了Github。</p>
+<p>在Github，zcbenz加入了Atom的开发，经过讨论，他们开始编写一个新的桌面应用框架，名称叫atom-shell。</p>
+<p>…………过了一段时间。</p>
+<p>后来，atom-shell就成了Electron，而node-webkit则成了NW.js。</p>
+<p>详细可以参考知乎回答： <a href="https://www.zhihu.com/question/36292298/answer/102418523" target="_blank" rel="noopener">https://www.zhihu.com/question/36292298/answer/102418523</a></p>
+<p>跟NW.js的恩怨情仇可以参考： <a href="http://cheng.guru/blog/2017/11/20/statement-on-the-statement-on-the-history-of-node-webkit.html" target="_blank" rel="noopener">http://cheng.guru/blog/2017/11/20/statement-on-the-statement-on-the-history-of-node-webkit.html</a></p>
+<p><em>当然，这些链接里的内容（以及我的博客）都带有先入为主的意味，不过反正……我管他呢。</em></p>
+<h3 id="那么Electron到底是个什么呢？"><a href="#那么Electron到底是个什么呢？" class="headerlink" title="那么Electron到底是个什么呢？"></a>那么Electron到底是个什么呢？</h3><h4 id="一句话简介"><a href="#一句话简介" class="headerlink" title="一句话简介"></a>一句话简介</h4><p>The Electron framework lets you write cross-platform desktop applications using JavaScript, HTML and CSS. It is based on Node.js and Chromium and is used by the Atom editor and many other apps.</p>
+<p>Electron框架使你可以用JavaScript，HTML和CSS来写跨平台桌面应用。它基于Node.js和Chromium，许多应用都使用了Electron框架，例如Atom编辑器。</p>
+<p>这是官方给的说法。单听这个一句话介绍，大概大家心里就有点数了：多半是Node.js来跟操作系统交互，Chromium来负责渲染页面。</p>
+<p>至于实际上也差不多，我们来仔细看一看。</p>
+<h4 id="Electron架构图"><a href="#Electron架构图" class="headerlink" title="Electron架构图"></a>Electron架构图</h4><p><img src="https://s1.ax1x.com/2018/05/24/CW0gzQ.png" alt="CW0gzQ.png"></p>
+<p><em>本图偷自Electron in Action</em></p>
+<p>就和上面说的差不多，Node.js带给了Electron和文件系统交互以及使用Node.js模块的能力；而Chromium则提供了HTML与CSS的渲染，DOM和Web APIs。</p>
+<p>现代做前端的应该都很熟悉这一套，所以就不多赘述。</p>
+<p>值得一提的是，Electron当然没有直接构建一整个Chromium，而是自己写了一个叫做libchromiumcontent的库，它独立地引入了 Chromium Content 模块及其所有依赖，并且Electron可以通过它来访问Chromium Content。</p>
+<p>Chromium Content Module要是再拿出来说就更大了，所以这里只留个参考链接：<a href="http://www.chromium.org/developers/content-module" target="_blank" rel="noopener">http://www.chromium.org/developers/content-module</a> </p>
+<p>注意一下compiled modules，如果要用的模块是没有编译过源码的（也就是所谓的原生Node.js模块），该怎么办呢？</p>
+<p>那就参考：<a href="https://electronjs.org/docs/tutorial/using-native-node-modules" target="_blank" rel="noopener">https://electronjs.org/docs/tutorial/using-native-node-modules</a></p>
+<p>不过Node.js原生模块很少，只有几百个，所以大概一般用不着这个参考。</p>
+<h4 id="quick-start"><a href="#quick-start" class="headerlink" title="quick-start"></a>quick-start</h4><p>这个是官方的quick-start项目<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 克隆示例项目的仓库</span><br><span class="line">git clone https://github.com/electron/electron-quick-start</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 进入这个仓库</span><br><span class="line">cd electron-quick-start</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 安装依赖并运行</span><br><span class="line">npm install &amp;&amp; npm start</span><br></pre></td></tr></table></figure></p>
+<h4 id="Electron的应用结构"><a href="#Electron的应用结构" class="headerlink" title="Electron的应用结构"></a>Electron的应用结构</h4><h6 id="文件目录"><a href="#文件目录" class="headerlink" title="文件目录"></a>文件目录</h6><p>一个最简单的Electron应用，大概长成这个样子：</p>
+<p>-<br>│  index.html<br>│  main.js<br>│  package.json<br>│  renderer.js<br>│<br>└─node_modules</p>
+<p>简单明了，有node基础的话是不需要什么解释的。</p>
+<h6 id="主进程和渲染进程"><a href="#主进程和渲染进程" class="headerlink" title="主进程和渲染进程"></a>主进程和渲染进程</h6><p><a href="https://imgchr.com/i/CWDfU0" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/05/24/CWDfU0.jpg" alt="CWDfU0.jpg"></a></p>
+<p>Electron 运行 package.json 的 main 脚本的进程被称为主进程。 在主进程中运行的脚本通过创建web页面来展示用户界面。 一个 Electron 应用总是有且只有一个主进程。</p>
+<p>由于 Electron 使用了 Chromium 来展示 web 页面，所以也用到了 Chromium 的多进程架构。 每个 Electron 中的 web 页面运行在它自己的渲染进程中。</p>
+<p>在普通的浏览器中，web页面通常在一个沙盒环境中运行，不被允许去接触原生的资源。 然而 Electron 的用户在 Node.js 的 API 支持下可以在页面中和操作系统进行一些底层交互。</p>
+<p>还记得上面的文件目录吗？main.js是主进程，主进程里通过实例化BrowserWindow对象来创建窗口，窗口的内容是index.html，这个窗口跑在一个渲染进程里，而且通过在index.html里require我们的renderer.js，我们可以在这个渲染进程里运行JavaScript代码。</p>
+<p>简单而很不准确的说，main.js就是主进程，renderer.js就是渲染进程。</p>
+<p>不论是在主进程还是渲染进程，都可以直接用Node的API和模块。换句话说，Node.js有多强，Electron就可以有多强。</p>
+<p>而Electron额外提供的API，有些只能在主进程里用，有些只能在渲染进程里用，也有些是没有限制，哪都能用。至于具体哪些对哪些，查看官方文档。</p>
+<h6 id="进程之间的通信"><a href="#进程之间的通信" class="headerlink" title="进程之间的通信"></a>进程之间的通信</h6><p>最常用的办法是使用Electron提供的ipc模块，其中主进程用ipcMain,渲染进程用ipcRenderer。ipc的用法无非就是ipcxxx.send()和ipcxxx.on()。这个官方样例很详细了。</p>
+<p>ipcMain/ipcRenderer主要是用来在主进程和渲染进程之间进行通信，那么渲染进程和渲染进程之间呢？主要就是用remote和wenContents来做。</p>
+<p>这背后有不少东西可说，但我现在想睡觉，所以就留到以后再说吧。</p>
 
       
 
@@ -281,11 +250,19 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教案</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Node</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Electron</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Desktop开发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -341,7 +318,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://Fisianna.github.io/2018/04/08/带学弟的教案-3-hexo/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://Fisianna.github.io/2018/05/24/Electron学习笔记（1）/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -355,18 +332,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/15/带学弟的教案-4-一个弹幕小demo/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          带学弟的教案-4-一个弹幕小demo
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/03/从今天起开始做魔王/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">从今天起开始做魔王</div>
+    <a href="/2018/05/10/增肥/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">增肥</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -397,8 +365,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "https://Fisianna.github.io/2018/04/08/带学弟的教案-3-hexo/", 
-    sourceId: "带学弟的教案-3-hexo",
+    url: "https://Fisianna.github.io/2018/05/24/Electron学习笔记（1）/", 
+    sourceId: "Electron学习笔记（1）",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
