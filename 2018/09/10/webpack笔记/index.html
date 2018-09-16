@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Fisianna.github.io">
-  <title>Tag: 周记 | Fisianna&#39;s Cross</title>
+  <title>webpack笔记 | Fisianna&#39;s Cross</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Fisianna&#39;s Cross">
-<meta property="og:url" content="https://Fisianna.github.io/tags/周记/index.html">
+  <meta name="description" content="什么是webpack？webpack是一个基于nodejs的在前端模块化浪潮下诞生的前端工具。大概去年秋天的时候就在摸react的时候接触webpack了，只不过一直嫌麻烦又在赶工程，都是用的别人的脚手架，别说自己配置，连webpack的官方文档都没看过一眼。这次正好趁着有几天空闲，把webpack的概念和哲学看一看。 之所以说是看概念和哲学，原因在于前端正处于爆炸发展期，互联网的发展带给了前端无">
+<meta name="keywords" content="笔记,webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack笔记">
+<meta property="og:url" content="https://Fisianna.github.io/2018/09/10/webpack笔记/index.html">
 <meta property="og:site_name" content="Fisianna&#39;s Cross">
+<meta property="og:description" content="什么是webpack？webpack是一个基于nodejs的在前端模块化浪潮下诞生的前端工具。大概去年秋天的时候就在摸react的时候接触webpack了，只不过一直嫌麻烦又在赶工程，都是用的别人的脚手架，别说自己配置，连webpack的官方文档都没看过一眼。这次正好趁着有几天空闲，把webpack的概念和哲学看一看。 之所以说是看概念和哲学，原因在于前端正处于爆炸发展期，互联网的发展带给了前端无">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://s1.ax1x.com/2018/09/16/iVH7q0.md.png">
+<meta property="og:updated_time" content="2018-09-16T07:22:41.572Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fisianna&#39;s Cross">
+<meta name="twitter:title" content="webpack笔记">
+<meta name="twitter:description" content="什么是webpack？webpack是一个基于nodejs的在前端模块化浪潮下诞生的前端工具。大概去年秋天的时候就在摸react的时候接触webpack了，只不过一直嫌麻烦又在赶工程，都是用的别人的脚手架，别说自己配置，连webpack的官方文档都没看过一眼。这次正好趁着有几天空闲，把webpack的概念和哲学看一看。 之所以说是看概念和哲学，原因在于前端正处于爆炸发展期，互联网的发展带给了前端无">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/09/16/iVH7q0.md.png">
   
     <link rel="alternative" href="/atom.xml" title="Fisianna&#39;s Cross" type="application/atom+xml">
   
@@ -140,148 +147,197 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-webpack笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      webpack笔记
+    </h1>
+  
+
+        
+        <a href="/2018/09/10/webpack笔记/" class="archive-article-date">
+  	<time datetime="2018-09-09T18:51:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-10</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是webpack？"><a href="#什么是webpack？" class="headerlink" title="什么是webpack？"></a>什么是webpack？</h2><p>webpack是一个基于nodejs的在前端模块化浪潮下诞生的前端工具。大概去年秋天的时候就在摸react的时候接触webpack了，只不过一直嫌麻烦又在赶工程，都是用的别人的脚手架，别说自己配置，连webpack的官方文档都没看过一眼。这次正好趁着有几天空闲，把webpack的概念和哲学看一看。</p>
+<p>之所以说是看概念和哲学，原因在于前端正处于爆炸发展期，互联网的发展带给了前端无数新的问题和挑战，对应地就提出了无数新概念（当然绝大部分其实是在计算机领域已经存在的概念）和相应的解决方法。技术和工具随着业务需求的变化年年变化，技术人员学习的重点就不应当是用法了。</p>
+<p>提webpack必然要先提前端模块化。前端工程越来越大，为了开发着想，模块化是必然趋势。在ES6以前，大家用AMD和CommonJS，ES6定稿之后，就基本全部转用ES6 module了。然而，有一个非常简单的问题：分的模块越多，文件就越多，请求数就越多，响应时间就长。减少请求数一直是前端优化的一个大方向，所以，把模块打包成一个文件的工具就成了开发的刚需。</p>
+<p>那webpack可以满足这个刚需吗？当然可以。在满足这个刚需的基础上，webpack有两个最根本的思想：</p>
+<p>一切都是模块。就像JS文件可以视作“模块”一样，其他所有的一切（CSS，图片，HTML）都可以被视作模块。也就是说，可以require(“myJSfile.js”)或者require(“myCSSfile.css”)。这意味着我们可以把任何静态资源分割成可控的模块，以供重复使用等不同的操作。<br>只加载“你需要的”和“你何时需要”的。典型的模块加载器会把所有的模块最终打包生成一个巨大的“bundle.js”文件。但在很多实际的项目当中，这个“bundle.js”文件体积可能会达到10MB~15MB，并且会一直不停进行加载。所以webpack通过大量的特性去分割代码，生成多个“bundle”片段，并且异步地加载项目的不同部分，因此只会加载“你需要的”和“你何时需要”的部分。</p>
+<p>因此，webpack“打败”了Make, Gulp, Grunt等等等等工具，成为了目前的前端应用圈子里最流行的打包器。不过，并不是所有的项目都适合webpack，尤其是绝大多数前端库，更青睐于用Rollup来打包。但Rollup就是另一个我还没接触的话题了。</p>
+<h2 id="webpack的工作方式"><a href="#webpack的工作方式" class="headerlink" title="webpack的工作方式"></a>webpack的工作方式</h2><p>不同于Grunt和Gulp，webpack会把你的项目当做一个整体，通过给定一个入口文件（如：index.js），Webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包为一个（或多个）浏览器可识别的JavaScript文件。</p>
+<p><a href="https://imgchr.com/i/iVH7q0" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/09/16/iVH7q0.md.png" alt="iVH7q0.md.png"></a></p>
+<h2 id="webpack的用法"><a href="#webpack的用法" class="headerlink" title="webpack的用法"></a>webpack的用法</h2><p>最基本的用法是在命令行使用，在写笔记时，用法是：<br>webpack-cli [options] &lt;entries…&gt; –output <output><br>当然，随时可以-h查看帮助。</output></p>
+<p>不过，使用命令行毕竟不方便，更常用的办法是，写一个配置文件。<br>在项目根目录里新建一个webpack.config.js文件，随后在终端里运行webpack，webpack就会读取这个配置文件开始工作。<br>webpack的配置有四个最核心的概念：entry，output，loader，plugins。</p>
+<p>在webpack文档中有详细的用例，并且这份文档国内的中文化工作做得很不错，所以没有不阅读的借口。<br><a href="https://www.webpackjs.com/concepts/" target="_blank" rel="noopener">中文文档</a><br><a href="https://webpack.js.org/concepts/" target="_blank" rel="noopener">官方文档</a></p>
+<p>entry是入口起点，指示 webpack 应该使用哪个模块，来作为构建其内部依赖图的开始。可以通过在 webpack 配置中配置 entry 属性，来指定一个入口起点（或多个入口起点）。默认值为 ./src。</p>
+<p>output是输出，最起码要是个对象，最少要有filename和path两个属性。</p>
+<p>loader可以让webpack拥有处理非js文件的能力，例如.css或者.ts之类。在module.rules里来配置loader。</p>
+<p>plugins是插件，用来执行范围更广的任务。使用插件先require它，然后添加到plugins数组里。</p>
+<p>一个配置文件的简单例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 一个常见的`webpack`配置文件</span></span><br><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</span><br><span class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>);</span><br><span class="line"><span class="keyword">const</span> ExtractTextPlugin = <span class="built_in">require</span>(<span class="string">'extract-text-webpack-plugin'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">        entry: __dirname + <span class="string">"/app/main.js"</span>, <span class="comment">//唯一入口文件</span></span><br><span class="line">        output: &#123;</span><br><span class="line">            path: __dirname + <span class="string">"/build"</span>,</span><br><span class="line">            filename: <span class="string">"bundle-[hash].js"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        devtool: <span class="string">'none'</span>,</span><br><span class="line">        devServer: &#123;</span><br><span class="line">            contentBase: <span class="string">"./public"</span>, <span class="comment">//本地服务器所加载的页面所在的目录</span></span><br><span class="line">            historyApiFallback: <span class="literal">true</span>, <span class="comment">//不跳转</span></span><br><span class="line">            inline: <span class="literal">true</span>,</span><br><span class="line">            hot: <span class="literal">true</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="built_in">module</span>: &#123;</span><br><span class="line">            rules: [&#123;</span><br><span class="line">                    test: <span class="regexp">/(\.jsx|\.js)$/</span>,</span><br><span class="line">                    use: &#123;</span><br><span class="line">                        loader: <span class="string">"babel-loader"</span></span><br><span class="line">                    &#125;,</span><br><span class="line">                    exclude: <span class="regexp">/node_modules/</span></span><br><span class="line">                &#125;, &#123;</span><br><span class="line">                    test: <span class="regexp">/\.css$/</span>,</span><br><span class="line">                    use: ExtractTextPlugin.extract(&#123;</span><br><span class="line">                        fallback: <span class="string">"style-loader"</span>,</span><br><span class="line">                        use: [&#123;</span><br><span class="line">                            loader: <span class="string">"css-loader"</span>,</span><br><span class="line">                            options: &#123;</span><br><span class="line">                                modules: <span class="literal">true</span>,</span><br><span class="line">                                localIdentName: <span class="string">'[name]__[local]--[hash:base64:5]'</span></span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;, &#123;</span><br><span class="line">                            loader: <span class="string">"postcss-loader"</span></span><br><span class="line">                        &#125;],</span><br><span class="line">                    &#125;)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="keyword">new</span> webpack.BannerPlugin(<span class="string">'版权所有，翻版必究'</span>),</span><br><span class="line">        <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">            template: __dirname + <span class="string">"/app/index.tmpl.html"</span> <span class="comment">//new 一个这个插件的实例，并传入相关的参数</span></span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="keyword">new</span> webpack.optimize.OccurrenceOrderPlugin(),</span><br><span class="line">        <span class="keyword">new</span> webpack.optimize.UglifyJsPlugin(),</span><br><span class="line">        <span class="keyword">new</span> ExtractTextPlugin(<span class="string">"style.css"</span>)</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>抱歉，但这是个假的打赏按钮<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/07/周记（3）/" class="archive-article-date">
-  	<time datetime="2018-05-07T13:32:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/07/周记（3）/">周记（3）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">周记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://Fisianna.github.io/2018/09/10/webpack笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/23/周记（2）/" class="archive-article-date">
-  	<time datetime="2018-04-22T19:08:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/24/Electron学习笔记（1）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Electron学习笔记（1）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/23/周记（2）/">周记（2）</a>
-    </h1>
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "https://Fisianna.github.io/2018/09/10/webpack笔记/", 
+    sourceId: "webpack笔记",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">周记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/15/周记（1）/" class="archive-article-date">
-  	<time datetime="2018-04-14T19:26:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/15/周记（1）/">周记（1）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">周记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -304,9 +360,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
